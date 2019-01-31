@@ -1,0 +1,66 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/message_view_bkg"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/sendMessagePanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/background_light"
+        android:orientation="horizontal"
+        android:paddingLeft="6sp"
+        android:paddingStart="6sp" tools:ignore="RtlSymmetry">
+
+        <EditText
+            android:id="@+id/edittext_chatbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/new_message_hint"
+            android:imeOptions="actionSend"
+            android:inputType="textShortMessage"/>
+
+
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/send_message"
+            android:onClick="sendData"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/send_message_button_hint"
+            android:paddingLeft="4sp"
+            android:paddingRight="8sp"
+            android:tint="?attr/colorAccent"
+            app:srcCompat="@drawable/ic_voice"/>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/sendMessagePanel">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/reyclerview_message_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

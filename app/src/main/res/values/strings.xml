@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Calendar bot</string>
+
+    <!-- Regular UI text -->
+    <string name="title_text">Hi\u00A0</string>
+    <string name="conclusion_text">\n Ask</string>
+
+    <!--Buttons-->
+    <string name="text_button">Send</string>
+    <string name="voice_button">Voice</string>
+
+
+
+
+
+
+
+</resources>
